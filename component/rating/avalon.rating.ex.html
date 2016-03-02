@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rating demo</title>
+<link type="text/css" rel="stylesheet"  href="../highlight/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="../style/avalon.doc.css"/>
+<script src="../highlight/shCore.js"></script>
+<script src="../../avalon.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>rating demo</h1>
+        <div class="demo-show" ms-controller="demo">
+            <fieldset>
+                <legend>默认设置</legend>
+                <ms:rating></ms:rating>
+            </fieldset>
+            <fieldset>
+                <legend>设置最大星标数</legend>
+                <ms:rating config="$rating_1"></ms:rating>
+            </fieldset>
+            <fieldset>
+                <legend>设置星标大小</legend>
+                <ms:rating config="$rating_2"></ms:rating>
+            </fieldset>
+            <fieldset>
+                <legend>设置默认星值</legend>
+                <ms:rating config="$rating_3"></ms:rating>
+            </fieldset>
+            <fieldset>
+                <legend>设置图标和颜色</legend>
+                <ms:rating config="$rating_4"></ms:rating>
+            </fieldset>
+            <script>
+                require(["./component/rating/avalon.rating"], function(avalon) {
+                    var model = avalon.define({
+                        $id:'demo',
+                        $rating_1:{max:10},
+                        $rating_2:{size:40},
+                        $rating_3:{defaultValue: 1},
+                        $rating_4:{
+                            selectedContent: '&#xf040;',
+                            selectedColor: 'red',
+                            notSelectedContent: '&#xf040;'
+                        }
+                    });
+                    avalon.scan();
+                });
+            </script>
+        </div>
+        <div ms-skip>
+            <pre class="brush: js; html-script: true; gutter: false; toolbar: false">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;rating demo&lt;/title&gt;
+&lt;script src="../../avalon.js"&gt;&lt;/script&gt;
+&lt;link rel="stylesheet" href="../style/avalon.doc.css"/&gt;
+&lt;/head&gt;
+&lt;body class="ms-controller"&gt;
+    &lt;div class="wrapper"&gt;
+        &lt;h1&gt;rating demo&lt;/h1&gt;
+        &lt;div class="demo-show" ms-controller="demo"&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;默认设置&lt;/legend&gt;
+                &lt;ms:rating&gt;&lt;/ms:rating&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;设置最大星标数&lt;/legend&gt;
+                &lt;ms:rating config="$rating_1"&gt;&lt;/ms:rating&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;设置星标大小&lt;/legend&gt;
+                &lt;ms:rating config="$rating_2"&gt;&lt;/ms:rating&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;设置默认星值&lt;/legend&gt;
+                &lt;ms:rating config="$rating_3"&gt;&lt;/ms:rating&gt;
+            &lt;/fieldset&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;设置图标和颜色&lt;/legend&gt;
+                &lt;ms:rating config="$rating_4"&gt;&lt;/ms:rating&gt;
+            &lt;/fieldset&gt;
+            &lt;script&gt;
+                require(["rating/avalon.rating"], function(avalon) {
+                    var model = avalon.define({
+                        $id:'demo',
+
+                        $rating_1:{max:10},
+
+                        $rating_2:{size:40},
+
+                        $rating_3:{defaultValue: 1},
+
+                        $rating_4:{
+                            selectedContent: '&#xf040;',
+                            selectedColor: 'red',
+                            notSelectedContent: '&#xf040;'
+                        }
+                    });
+                    avalon.scan();
+                });
+            &lt;/script&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+            </pre>
+        </div>
+    </div>
+</body>
